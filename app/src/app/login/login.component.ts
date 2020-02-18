@@ -19,6 +19,13 @@ export class LoginComponent implements OnInit {
 
   public onLogin() {
     this.http.post(this.url + `?user=${this.username}&pass=${this.password}`, '')
-      .toPromise().then(data => console.log(data));
+      .toPromise().then(data => {
+        console.log(data);
+        alert('כבר מעבירים אותך... לא לברוח :)');
+      })
+      .catch(data => {
+        console.log(data);
+        alert('משהו קרה :( בבקשה נסה מחדש');
+      });
   }
 }

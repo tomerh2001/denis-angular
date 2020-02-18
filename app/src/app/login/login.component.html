@@ -1,16 +1,21 @@
+<!-- import font -->
+<link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+
 <div class="form">
-    <div class="form-title">Login</div>
+    <div class="form-title">התחברות</div>
     <div class="form-fields">
         <div class="form-field">
-            <div class="form-fields-label">Username</div>
+            <div class="form-fields-label">שם משתמש</div>
             <input input class="form-fields-input" type="text" [(ngModel)]="username">
         </div>
         <div class="form-field">
-            <div class="form-fields-label">Password</div>
+            <div class="form-fields-label">סיסמא</div>
             <input class="form-fields-input" type="password" [(ngModel)]="password">
         </div>
     </div>
+    <hr>
     <div class="form-buttons">
-        <input value='Login' type='button' (click)="onLogin()">
+        <input value='התחבר' type='button' (click)="onLogin()">
+        <input value='הירשם' type='button' (click)="onLogin()">
     </div>
 </div>
