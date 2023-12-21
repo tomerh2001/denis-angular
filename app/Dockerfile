@@ -5,6 +5,6 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:1.16.0-alpine
+FROM nginx:1.24-alpine
 COPY --from=build-step /app/dist/app /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
